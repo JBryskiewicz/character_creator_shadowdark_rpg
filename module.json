@@ -1,0 +1,14 @@
+{
+    "id": "shadowdark-character-creator",
+    "title": "Character creator for Shadowdark RPG",
+    "description": "A simple module for character rolling automatization.",
+    "authors": [
+      {
+      "name": "ZiemovitZ"
+      }
+    ],
+    "version": "1.0.0",
+    "compatibility": {
+      "minimum": "11"
+    }
+  }
