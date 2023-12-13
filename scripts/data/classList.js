@@ -1,10 +1,15 @@
-import { levelTalents } from "./data/levelTalents";
-
-export const classList = {
+const classList = {
   cleric: {
     id: "oZWzXx1WRLg286zD",
     name: "cleric",
     hitDice: 6,
+    numberOfLanguages: [0, 1],
+    languages: [],
+    rareLanguages: [
+      { id: "EP8NdjL8B5xXK7u9", name: "celestial" },
+      { id: "b5yBrLaRIl7ZEWKu", name: "diabolic" },
+      { id: "ufwua5RXnJXlA0St", name: "primordial" },
+    ],
     features: ["QxhyKNW4aDQqolMi", "EYRxfb5BUEzH1w3b", "LfHTnYW8I65x8Y31"],
     talents: {
       2: [levelTalents.spellcastAdvantage],
@@ -24,6 +29,9 @@ export const classList = {
     id: "hO7KrvqDRH6kvftJ",
     name: "fighter",
     hitDice: 8,
+    numberOfLanguages: [0, 0],
+    languages: [],
+    rareLanguages: [],
     features: [
       "5bpWuaT0KTNzuzCu",
       "7JTDRLtHc6FOrIEc",
@@ -60,6 +68,9 @@ export const classList = {
     id: "C6wkCa2w5dlgSq7f",
     name: "thief",
     hitDice: 4,
+    numberOfLanguages: [0, 0],
+    languages: [],
+    rareLanguages: [],
     features: ["KLDZKFY6SrqQKSva", "TiaXUSTLoJpjfyxD"],
     talents: {
       2: [levelTalents.initiativeAdvantage],
@@ -95,6 +106,25 @@ export const classList = {
     id: "035nuVkU9q2wtMPs",
     name: "wizard",
     hitDice: 4,
+    numberOfLanguages: [2, 2],
+    languages: [
+      { id: "DQzHvoMWSZ0eiRWP", name: "common" },
+      { id: "DBK9gi6d0SGVlRwv", name: "dwarvish" },
+      { id: "wABiw5UhzG2G8Kpa", name: "elvish" },
+      { id: "hW4BI5ySXhxQiYiV", name: "giant" },
+      { id: "NN9wFGgwk49oOQeN", name: "goblin" },
+      { id: "MtNt0wGJ3OaDVl7x", name: "merran" },
+      { id: "1iECxGKqGpV3k6VZ", name: "orcish" },
+      { id: "FluOqMSSPoS6hT1H", name: "reptilian" },
+      { id: "Lf6kATbC1uNPLnPi", name: "sylvan" },
+      { id: "FQcnF3JQRw9wL7PN", name: "thanian" },
+    ],
+    rareLanguages: [
+      { id: "EP8NdjL8B5xXK7u9", name: "celestial" },
+      { id: "b5yBrLaRIl7ZEWKu", name: "diabolic" },
+      { id: "ufwua5RXnJXlA0St", name: "primordial" },
+      { id: "GVbmj6D47b9lbOHz", name: "draconic" },
+    ],
     features: ["Td6iQW4hVJLZLVLi", "LFMT8qZ6ZL3LvYFM"],
     talents: {
       2: [levelTalents.makeRandItem],
@@ -114,6 +144,9 @@ export const classList = {
     id: "SIEizdu3Jv9DHY1m",
     name: "ranger",
     hitDice: 8,
+    numberOfLanguages: [0, 0],
+    languages: [],
+    rareLanguages: [],
     features: ["cUz7U8n0amQd5QQM", "ZjCvQZ7k4hBa9y2I"],
     talents: {
       2: [levelTalents.weaponDamageDice],
@@ -151,13 +184,13 @@ export const classList = {
       10: [levelTalents.herbalismChecks],
       11: [levelTalents.herbalismChecks],
       12: [
-        "Choose one option from ranger talent table",
         levelTalents.bonusTwoStrength,
         levelTalents.bonusTwoDexterity,
         levelTalents.bonusTwoConstitution,
         levelTalents.bonusTwoIntelligence,
         levelTalents.bonusTwoWisdom,
         levelTalents.bonusTwoCharisma,
+        "Choose one option from ranger talent table",
       ],
     },
   },
@@ -165,6 +198,25 @@ export const classList = {
     id: "112M28Tvi2ju06BE",
     name: "bard",
     hitDice: 6,
+    numberOfLanguages: [4, 1],
+    languages: [
+      { id: "DQzHvoMWSZ0eiRWP", name: "common" },
+      { id: "DBK9gi6d0SGVlRwv", name: "dwarvish" },
+      { id: "wABiw5UhzG2G8Kpa", name: "elvish" },
+      { id: "hW4BI5ySXhxQiYiV", name: "giant" },
+      { id: "NN9wFGgwk49oOQeN", name: "goblin" },
+      { id: "MtNt0wGJ3OaDVl7x", name: "merran" },
+      { id: "1iECxGKqGpV3k6VZ", name: "orcish" },
+      { id: "FluOqMSSPoS6hT1H", name: "reptilian" },
+      { id: "Lf6kATbC1uNPLnPi", name: "sylvan" },
+      { id: "FQcnF3JQRw9wL7PN", name: "thanian" },
+    ],
+    rareLanguages: [
+      { id: "EP8NdjL8B5xXK7u9", name: "celestial" },
+      { id: "b5yBrLaRIl7ZEWKu", name: "diabolic" },
+      { id: "ufwua5RXnJXlA0St", name: "primordial" },
+      { id: "GVbmj6D47b9lbOHz", name: "draconic" },
+    ],
     features: [
       "3gJPMZ8M4paFtm1n",
       "j7nfbsMivwfCVkN0",

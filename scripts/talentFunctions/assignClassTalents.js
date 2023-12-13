@@ -29,18 +29,18 @@ export const assignClassTalents = async (actor, characterClass) => {
     new Dialog({
       title: "Choose class talent: ",
       content: `
-                  <form>
-                    <div class="form-group">
-                      <label for="talent">Choose one class talent:</label>
-                      <select name="talent" id="talent">
-                      ${classTalentOptions.map(
-                        (option) =>
-                          `<option value="${option._id}">${option.name}</option>`
-                      )}
-                      </select>
-                    </div>
-                  </form>
-                `,
+              <form>
+                <div class="form-group">
+                  <label for="talent">Choose one class talent:</label>
+                  <select name="talent" id="talent">
+                  ${classTalentOptions.map(
+                    (option) =>
+                      `<option value="${option._id}">${option.name}</option>`
+                  )}
+                  </select>
+                </div>
+              </form>
+            `,
       buttons: {
         ok: {
           label: "Submit",

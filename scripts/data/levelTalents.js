@@ -1,4 +1,4 @@
-export const levelTalents = {
+const levelTalents = {
   bardPerformEffect: "gRyFoUtbbnkwcxy9",
   bardDabblerRolls: "x4xTNUsimUpO3JBt",
   bonusSpellcastChecks: "0WmG5j0Wv685YTqO",
