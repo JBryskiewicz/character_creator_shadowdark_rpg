@@ -1,6 +1,6 @@
 import { initializeCreator } from "./creatorFunctions/initializeCreator.js";
 
-console.log("seems like a-module works for now");
+console.log("Shadowdark RPG - Character Creator | ...Initialized");
 
 Hooks.on("init", function () {
   addTokenControlsButton();

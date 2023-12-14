@@ -1,7 +1,7 @@
 import { saveAttributes } from "./saveAttributes.js";
 import { characterBuilder } from "./characterBuilder.js";
 
-export const initializeCreator = () => {
+export const initializeCreator = async () => {
   new Dialog({
     title: "Confirmation: ",
     content: `<p>Do you want to create new actor?</p>`,
@@ -19,9 +19,8 @@ export const initializeCreator = () => {
             "prototypeToken.sight.visionMode": "darkvision",
           });
 
-          saveAttributes(actor);
-          characterBuilder(actor);
-          actor.sheet.render(true);
+          const attributes = await saveAttributes(actor);
+          characterBuilder(actor, attributes);
         },
       },
       cancel: {

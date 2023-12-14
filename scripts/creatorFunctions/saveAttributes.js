@@ -21,4 +21,6 @@ export const saveAttributes = async (actor) => {
     "system.abilities.wis.base": statArray[4],
     "system.abilities.cha.base": statArray[5],
   });
+
+  return statArray;
 };

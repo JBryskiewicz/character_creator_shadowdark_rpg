@@ -10,7 +10,7 @@ export const assignRaceLanguages = (actor, characterClass, race) => {
       content: `
           <form>
             <div class="form-group">
-              <label for="language">Choose additional langauge:</label>
+              <label for="language">Additional langauge:</label>
               <select name="language" id="language">
               ${languageArray.map(
                 (option) =>

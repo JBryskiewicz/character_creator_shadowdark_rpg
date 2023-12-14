@@ -16,11 +16,23 @@ const rollCharacterGold = async () => {
   return gold;
 };
 
-export const characterBuilder = (actor) => {
+export const characterBuilder = (actor, attributes) => {
   new Dialog({
     title: "Character creator: ",
     content: `
                 <form>
+                  <table>
+                    <tr>
+                      <td><b>Strength:</b> ${attributes[0]}</td>
+                      <td><b>Dexterity:</b> ${attributes[1]}</td>
+                      <td><b>Constitution:</b> ${attributes[2]}</td>
+                    </tr>
+                    <tr>
+                      <td><b>Intelligence:</b> ${attributes[3]}</td>
+                      <td><b>Wisdom:</b> ${attributes[4]}</td>
+                      <td><b>Charisma:</b> ${attributes[5]}</td>
+                    </tr>
+                  </table>
                   <div class="form-group">
                     <label for="name">Character name:</label>
                     <input type="text" name="name" id="name" value="">
