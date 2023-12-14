@@ -56,14 +56,14 @@ export const assignClassLanguages = (
         callback: (html) => {
           const classLanguageList = [];
 
-          for (idx = 0; idx < langs[0]; idx++) {
+          for (let idx = 0; idx < langs[0]; idx++) {
             classLanguageList.push(
               `Compendium.shadowdark.languages.Item.${html
                 .find(`#common${idx}`)
                 .val()}`
             );
           }
-          for (idx = 0; idx < langs[1]; idx++) {
+          for (let idx = 0; idx < langs[1]; idx++) {
             classLanguageList.push(
               `Compendium.shadowdark.languages.Item.${html
                 .find(`#rare${idx}`)
