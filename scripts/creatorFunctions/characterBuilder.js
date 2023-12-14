@@ -1,11 +1,10 @@
-import { classList } from "./data/classList";
-import { raceList } from "./data/raceList";
-import { assignRaceTalents } from "./talentFunctions/assignRaceTalents";
-import { assignClassTalents } from "./talentFunctions/assignClassTalents";
-import { assignLevelTalents } from "./talentFunctions/assignLevelTalents";
-import { assignRaceLanguages } from "../languageFunctions/assignRaceLanguages";
-import { rollCharacterHp } from "./rollCharacterHp";
-import { returnDwarfBonusHp } from "./rollCharacterHp";
+import { classList } from "../data/classList.js";
+import { raceList } from "../data/raceList.js";
+import { rollCharacterHp, returnDwarfBonusHp } from "./rollCharacterHp.js";
+import { assignRaceTalents } from "../talentFunctions/assignRaceTalents.js";
+import { assignClassTalents } from "../talentFunctions/assignClassTalents.js";
+import { assignLevelTalents } from "../talentFunctions/assignLevelTalents.js";
+import { assignRaceLanguages } from "../languageFunctions/assignRaceLanguages.js";
 
 const validCharacterName = (actor, characterName) => {
   return characterName === "" ? actor.name : characterName;
@@ -21,29 +20,29 @@ export const characterBuilder = (actor) => {
   new Dialog({
     title: "Character creator: ",
     content: `
-              <form>
-                <div class="form-group">
-                  <label for="name">Character name:</label>
-                  <input type="text" name="name" id="name" value="">
-                </div>
-                <div class="form-group">
-                  <label for="class">Choose class:</label>
-                  <select name="class" id="class">
-                  ${Object.entries(classList).map(
-                    ([name]) => `<option value="${name}">${name}</option>`
-                  )}
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="race">Choose race:</label>
-                  <select name="race" id="race">
-                  ${Object.entries(raceList).map(
-                    ([key]) => `<option value="${key}">${key}</option>`
-                  )}
-                  </select>
-                </div>
-              </form>
-            `,
+                <form>
+                  <div class="form-group">
+                    <label for="name">Character name:</label>
+                    <input type="text" name="name" id="name" value="">
+                  </div>
+                  <div class="form-group">
+                    <label for="class">Choose class:</label>
+                    <select name="class" id="class">
+                    ${Object.entries(classList).map(
+                      ([name]) => `<option value="${name}">${name}</option>`
+                    )}
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="race">Choose race:</label>
+                    <select name="race" id="race">
+                    ${Object.entries(raceList).map(
+                      ([key]) => `<option value="${key}">${key}</option>`
+                    )}
+                    </select>
+                  </div>
+                </form>
+              `,
     buttons: {
       ok: {
         label: "Submit",

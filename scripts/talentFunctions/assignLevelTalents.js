@@ -1,5 +1,5 @@
-import { classList } from "./data/classList";
-import { assignOnRollTwelveTalent } from "./onRollTwelveTalents";
+import { classList } from "../data/classList.js";
+import { assignOnRollTwelveTalent } from "./onRollTwelveTalents.js";
 
 export const assignLevelTalents = async (actor, characterClass, race) => {
   const talent = await new Roll("2d6").roll();
@@ -19,18 +19,18 @@ export const assignLevelTalents = async (actor, characterClass, race) => {
       new Dialog({
         title: "Choose class talent: ",
         content: `
-              <form>
-                <div class="form-group">
-                  <label for="talent">Choose level 1 talent:</label>
-                  <select name="talent" id="talent">
-                  ${talentObjectArray.map(
-                    (option) =>
-                      `<option value="${option._id}">${option.name}</option>`
-                  )}
-                  </select>
-                </div>
-              </form>
-            `,
+                <form>
+                  <div class="form-group">
+                    <label for="talent">Choose level 1 talent:</label>
+                    <select name="talent" id="talent">
+                    ${talentObjectArray.map(
+                      (option) =>
+                        `<option value="${option._id}">${option.name}</option>`
+                    )}
+                    </select>
+                  </div>
+                </form>
+              `,
         buttons: {
           ok: {
             label: "Submit",
@@ -74,18 +74,18 @@ export const assignLevelTalents = async (actor, characterClass, race) => {
         new Dialog({
           title: "Choose class talent: ",
           content: `
-                <form>
-                  <div class="form-group">
-                    <label for="talent">Choose level 1 talent:</label>
-                    <select name="talent" id="talent">
-                    ${bonusTalentObjectArray.map(
-                      (option) =>
-                        `<option value="${option._id}">${option.name}</option>`
-                    )}
-                    </select>
-                  </div>
-                </form>
-              `,
+                  <form>
+                    <div class="form-group">
+                      <label for="talent">Choose level 1 talent:</label>
+                      <select name="talent" id="talent">
+                      ${bonusTalentObjectArray.map(
+                        (option) =>
+                          `<option value="${option._id}">${option.name}</option>`
+                      )}
+                      </select>
+                    </div>
+                  </form>
+                `,
           buttons: {
             ok: {
               label: "Submit",

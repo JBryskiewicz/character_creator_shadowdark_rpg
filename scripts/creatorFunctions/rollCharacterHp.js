@@ -1,4 +1,4 @@
-import { classList } from "./data/classList";
+import { classList } from "../data/classList.js";
 
 export const rollCharacterHp = (actor, characterClass, race) => {
   const conModifier =

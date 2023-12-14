@@ -1,4 +1,4 @@
-import { classList } from "./data/classList";
+import { classList } from "../data/classList.js";
 
 const talentsRemoveDuplicatesToList = (classTalents) => {
   const filteredTalents = [...new Set(Object.values(classTalents).flat())];
@@ -17,18 +17,18 @@ export const assignOnRollTwelveTalent = async (actor, characterClass) => {
   new Dialog({
     title: "Choose class talent: ",
     content: `
-            <form>
-              <div class="form-group">
-                <label for="talent">Choose level 1 talent:</label>
-                <select name="talent" id="talent">
-                ${talentObjectsList.map(
-                  (option) =>
-                    `<option value="${option._id}">${option.name}</option>`
-                )}
-                </select>
-              </div>
-            </form>
-          `,
+              <form>
+                <div class="form-group">
+                  <label for="talent">Choose level 1 talent:</label>
+                  <select name="talent" id="talent">
+                  ${talentObjectsList.map(
+                    (option) =>
+                      `<option value="${option._id}">${option.name}</option>`
+                  )}
+                  </select>
+                </div>
+              </form>
+            `,
     buttons: {
       ok: {
         label: "Submit",

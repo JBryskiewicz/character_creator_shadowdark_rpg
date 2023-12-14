@@ -1,4 +1,4 @@
-const raceList = {
+export const raceList = {
   human: {
     race: "w3gbUH2DOBxfZPHO",
     talent: ["DYWFJu5XeazJYc0P"],

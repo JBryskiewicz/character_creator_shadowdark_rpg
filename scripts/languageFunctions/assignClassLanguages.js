@@ -1,4 +1,4 @@
-import { classList } from "./data/classList";
+import { classList } from "../data/classList.js";
 
 const classLanguagesSelectionTemplate = (characterClass, racialLanguages) => {
   const filteringLanguagesById = racialLanguages.map((item) =>
@@ -17,24 +17,24 @@ const classLanguagesSelectionTemplate = (characterClass, racialLanguages) => {
   let table = "<form>";
   for (let idx = 0; idx < langs[0]; idx++) {
     table += `<div class="form-group">
-        <label for="common${idx}">Common langauge:</label>
-        <select name="common${idx}" id="common${idx}">
-          ${commonLanguageList.map(
-            (option) => `<option value="${option.id}">${option.name}</option>`
-          )}
-        </select>
-      </div>`;
+          <label for="common${idx}">Common langauge:</label>
+          <select name="common${idx}" id="common${idx}">
+            ${commonLanguageList.map(
+              (option) => `<option value="${option.id}">${option.name}</option>`
+            )}
+          </select>
+        </div>`;
   }
 
   for (let idx = 0; idx < langs[1]; idx++) {
     table += `<div class="form-group">
-        <label for="rare${idx}">Rare langauge:</label>
-        <select name="rare${idx}" id="rare${idx}">
-          ${rareLanguageList.map(
-            (option) => `<option value="${option.id}">${option.name}</option>`
-          )}
-        </select>
-      </div>`;
+          <label for="rare${idx}">Rare langauge:</label>
+          <select name="rare${idx}" id="rare${idx}">
+            ${rareLanguageList.map(
+              (option) => `<option value="${option.id}">${option.name}</option>`
+            )}
+          </select>
+        </div>`;
   }
   table += `</form>`;
   return table;

@@ -1,4 +1,4 @@
-import { raceList } from "./data/raceList";
+import { raceList } from "../data/raceList.js";
 
 export const assignRaceTalents = async (actor, race) => {
   const talentArray = raceList[race].talent;
@@ -12,18 +12,18 @@ export const assignRaceTalents = async (actor, race) => {
     new Dialog({
       title: "Choose race talent: ",
       content: `
-              <form>
-                <div class="form-group">
-                  <label for="talent">Choose race talent:</label>
-                  <select name="talent" id="talent">
-                  ${talentObjectArray.map(
-                    (option) =>
-                      `<option value="${option._id}">${option.name}</option>`
-                  )}
-                  </select>
-                </div>
-              </form>
-            `,
+                <form>
+                  <div class="form-group">
+                    <label for="talent">Choose race talent:</label>
+                    <select name="talent" id="talent">
+                    ${talentObjectArray.map(
+                      (option) =>
+                        `<option value="${option._id}">${option.name}</option>`
+                    )}
+                    </select>
+                  </div>
+                </form>
+              `,
       buttons: {
         ok: {
           label: "Submit",

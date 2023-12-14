@@ -1,5 +1,5 @@
-import { assignClassLanguages } from "./assignClassLanguages";
-import { raceList } from "./data/raceList";
+import { raceList } from "../data/raceList.js";
+import { assignClassLanguages } from "./assignClassLanguages.js";
 
 export const assignRaceLanguages = (actor, characterClass, race) => {
   if (race === "human") {
@@ -8,17 +8,18 @@ export const assignRaceLanguages = (actor, characterClass, race) => {
     new Dialog({
       title: "Choose language: ",
       content: `
-        <form>
-          <div class="form-group">
-            <label for="language">Choose additional langauge:</label>
-            <select name="language" id="language">
-            ${languageArray.map(
-              (option) => `<option value="${option.id}">${option.name}</option>`
-            )}
-            </select>
-          </div>
-        </form>
-      `,
+          <form>
+            <div class="form-group">
+              <label for="language">Choose additional langauge:</label>
+              <select name="language" id="language">
+              ${languageArray.map(
+                (option) =>
+                  `<option value="${option.id}">${option.name}</option>`
+              )}
+              </select>
+            </div>
+          </form>
+        `,
       buttons: {
         ok: {
           label: "Submit",

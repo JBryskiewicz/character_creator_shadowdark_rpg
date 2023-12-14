@@ -1,4 +1,6 @@
-const classList = {
+import { levelTalents } from "./levelTalents.js";
+
+export const classList = {
   cleric: {
     id: "oZWzXx1WRLg286zD",
     name: "cleric",
