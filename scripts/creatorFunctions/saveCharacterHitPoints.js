@@ -1,6 +1,6 @@
 import { classList } from "../data/classList.js";
 
-export const rollCharacterHp = (actor, characterClass, race) => {
+const rollCharacterHp = (actor, characterClass, race) => {
   const conModifier =
     actor.system.abilities.con.mod > 1 ? actor.system.abilities.con.mod : 1;
 
@@ -20,6 +20,16 @@ export const rollCharacterHp = (actor, characterClass, race) => {
   return hp;
 };
 
-export const returnDwarfBonusHp = (race) => {
+const returnDwarfBonusHp = (race) => {
   return race === "dwarf" ? 2 : 0;
+};
+
+export const saveCharacterHitPoints = (actor, characterClass, race) => {
+  const hp = rollCharacterHp(actor, characterClass, race);
+  const dwarfBonusHp = returnDwarfBonusHp(race);
+
+  actor.update({
+    "system.attributes.hp.value": hp + dwarfBonusHp,
+    "system.attributes.hp.base": hp,
+  });
 };

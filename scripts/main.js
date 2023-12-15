@@ -1,6 +1,6 @@
 import { initializeCreator } from "./creatorFunctions/initializeCreator.js";
 
-console.log("Shadowdark RPG - Character Creator | ...Initialized");
+console.log("Shadowdark RPG - Character Creator");
 
 Hooks.on("init", function () {
   addTokenControlsButton();
@@ -20,7 +20,7 @@ function addTokenControlsButton() {
     if (tokenControlsButton) {
       addButton(tokenControlsButton.tools, {
         name: "myTokenButton",
-        title: "My Token Button",
+        title: "Create new actor",
         icon: "fas fa-star",
         onClick: () => {
           initializeCreator();
