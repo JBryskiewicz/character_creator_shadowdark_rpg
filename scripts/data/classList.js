@@ -63,7 +63,7 @@ export const classList = {
       ],
       10: [levelTalents.armorMastery],
       11: [levelTalents.armorMastery],
-      12: "Choose one option from the fighter talent table",
+      12: ["Choose one option from the fighter talent table"],
     },
   },
   thief: {
@@ -101,7 +101,7 @@ export const classList = {
       ],
       10: [levelTalents.meleeAndRangedBonus],
       11: [levelTalents.meleeAndRangedBonus],
-      12: "Choose one option from the thief talent table",
+      12: ["Choose one option from the thief talent table"],
     },
   },
   wizard: {
@@ -139,7 +139,7 @@ export const classList = {
       9: [levelTalents.spellcastAdvantage],
       10: [levelTalents.learnSpell],
       11: [levelTalents.learnSpell],
-      12: "Choose one option from the wizard talent table",
+      12: ["Choose one option from the wizard talent table"],
     },
   },
   ranger: {

@@ -1,53 +1,21 @@
+import { assignTalentForm } from "../../templates/assignTalentForm.js";
 import { raceList } from "../data/raceList.js";
+import { saveCharactersTalent } from "./assignTalentSupportFunction.js";
+import { talentChoiceDialogWindow } from "./talentChoiceDialogWindow.js";
 
-export const assignRaceTalents = async (actor, race) => {
-  const talentArray = raceList[race].talent;
-
-  const talentObjectArray = [
-    game.packs.get("shadowdark.talents").index.get(talentArray[0]),
-    game.packs.get("shadowdark.talents").index.get(talentArray[1]),
-  ];
-
+export const assignRaceTalents = (actor, race) => {
   if (race === "elf") {
-    new Dialog({
-      title: "Choose race talent: ",
-      content: `
-                <form>
-                  <div class="form-group">
-                    <label for="talent">Choose race talent:</label>
-                    <select name="talent" id="talent">
-                    ${talentObjectArray.map(
-                      (option) =>
-                        `<option value="${option._id}">${option.name}</option>`
-                    )}
-                    </select>
-                  </div>
-                </form>
-              `,
-      buttons: {
-        ok: {
-          label: "Submit",
-          callback: async (html) => {
-            const talentId = (html = html.find("#talent").val());
-            const ancestryTalent = game.packs
-              .get("shadowdark.talents")
-              .getDocument(talentId);
-            await ancestryTalent.then((result) =>
-              actor.createEmbeddedDocuments("Item", [result])
-            );
-          },
-        },
-        cancel: {
-          label: "Cancel",
-        },
-      },
-    }).render(true);
-  } else {
-    const ancestryTalent = game.packs
-      .get("shadowdark.talents")
-      .getDocument(raceList[race].talent[0]);
-    await ancestryTalent.then((result) =>
-      actor.createEmbeddedDocuments("Item", [result])
+    const elfAncestryTalents = raceList[race].talent.map((talent) =>
+      game.packs.get("shadowdark.talents").index.get(talent)
     );
+    talentChoiceDialogWindow(
+      actor,
+      elfAncestryTalents,
+      "Race talent:",
+      "Elf talent:"
+    );
+  } else {
+    const talentId = raceList[race].talent[0];
+    saveCharactersTalent(actor, talentId);
   }
 };
