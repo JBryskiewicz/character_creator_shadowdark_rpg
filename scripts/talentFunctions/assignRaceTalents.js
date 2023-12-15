@@ -1,4 +1,3 @@
-import { assignTalentForm } from "../../templates/assignTalentForm.js";
 import { raceList } from "../data/raceList.js";
 import { saveCharactersTalent } from "./assignTalentSupportFunction.js";
 import { talentChoiceDialogWindow } from "./talentChoiceDialogWindow.js";

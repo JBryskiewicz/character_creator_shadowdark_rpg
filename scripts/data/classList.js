@@ -63,7 +63,15 @@ export const classList = {
       ],
       10: [levelTalents.armorMastery],
       11: [levelTalents.armorMastery],
-      12: ["Choose one option from the fighter talent table"],
+      12: [
+        levelTalents.bonusTwoStrength,
+        levelTalents.bonusTwoDexterity,
+        levelTalents.bonusTwoConstitution,
+        levelTalents.bonusTwoIntelligence,
+        levelTalents.bonusTwoWisdom,
+        levelTalents.bonusTwoCharisma,
+        "Choose one option from fighter talent table",
+      ],
     },
   },
   thief: {
