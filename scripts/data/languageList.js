@@ -1,4 +1,4 @@
-export const commonlanguages = {
+export const commonLanguages = {
   common: { id: "DQzHvoMWSZ0eiRWP", name: "common", type: "common" },
   dwarvish: { id: "DBK9gi6d0SGVlRwv", name: "dwarvish", type: "common" },
   elvish: { id: "wABiw5UhzG2G8Kpa", name: "elvish", type: "common" },
