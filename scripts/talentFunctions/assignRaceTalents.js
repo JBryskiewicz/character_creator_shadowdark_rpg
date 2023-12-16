@@ -5,7 +5,7 @@ import { talentChoiceDialogWindow } from "./talentChoiceDialogWindow.js";
 export const assignRaceTalents = (actor, race) => {
   if (race === "elf") {
     const elfAncestryTalents = raceList[race].talent.map((talent) =>
-      game.packs.get("shadowdark.talents").index.get(talent)
+      game.packs.get("shadowdark.talents").index.get(talent.id)
     );
     talentChoiceDialogWindow(
       actor,
@@ -14,7 +14,7 @@ export const assignRaceTalents = (actor, race) => {
       "Elf talent:"
     );
   } else {
-    const talentId = raceList[race].talent[0];
+    const talentId = raceList[race].talent[0].id;
     saveCharactersTalent(actor, talentId);
   }
 };
