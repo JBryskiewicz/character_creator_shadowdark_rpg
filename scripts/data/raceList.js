@@ -1,10 +1,10 @@
-import { commonlanguages } from "./languageList.js";
+import { commonLanguages } from "./languageList.js";
 
-const humanLanguages = Object.entries(commonlanguages)
+const humanLanguages = Object.entries(commonLanguages)
   .filter(([key]) => key !== "common")
   .map(([key, value]) => value);
 
-const commonLanguage = commonlanguages["common"];
+const commonLanguage = commonLanguages["common"];
 
 export const raceList = {
   human: {
@@ -27,27 +27,27 @@ export const raceList = {
     ],
     knownLanguages: [
       commonLanguage,
-      commonlanguages["elvish"],
-      commonlanguages["sylvan"],
+      commonLanguages["elvish"],
+      commonLanguages["sylvan"],
     ],
     languageOfChoice: [],
   },
   dwarf: {
     race: "80h0XXptGDZvGAIZ",
     talent: [{ id: "MW43tnJr6lqE1Ty8", name: "stout" }],
-    knownLanguages: [commonLanguage, commonlanguages["dwarvish"]],
+    knownLanguages: [commonLanguage, commonLanguages["dwarvish"]],
     languageOfChoice: [],
   },
   goblin: {
     race: "QG1lAZeLfBtXR6zh",
     talent: [{ id: "Gf5dApLfOorbQn4R", name: "keen senses" }],
-    knownLanguages: [commonLanguage, commonlanguages["goblin"]],
+    knownLanguages: [commonLanguage, commonLanguages["goblin"]],
     languageOfChoice: [],
   },
   "half-orc": {
     race: "0lJ8Pj0UPsbSSUTm",
     talent: [{ id: "LR6h4lXVXwx7AFQ6", name: "mighty" }],
-    knownLanguages: [commonLanguage, commonlanguages["orcish"]],
+    knownLanguages: [commonLanguage, commonLanguages["orcish"]],
     languageOfChoice: [],
   },
 };
