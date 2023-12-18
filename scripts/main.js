@@ -19,9 +19,9 @@ function addTokenControlsButton() {
 
     if (tokenControlsButton) {
       addButton(tokenControlsButton.tools, {
-        name: "myTokenButton",
+        name: "characterCreateButton",
         title: "Create new actor",
-        icon: "fas fa-star",
+        icon: "fa-solid fa-helmet-battle",
         onClick: () => {
           initializeCreator();
         },

@@ -15,7 +15,7 @@ export const initializeCreator = async () => {
             name: `${player}'s new Actor`,
             type: "Player",
             img: "icons/svg/mystery-man.svg",
-            "prototypeToken.sight.range": 10,
+            "prototypeToken.sight.range": 5,
             "prototypeToken.sight.visionMode": "darkvision",
           });
 
